@@ -13,22 +13,27 @@ h2, h3{
     text-align: center;
 }
 
-fieldset{
+.center-block{
     margin: auto;
-    max-width: 300px;
+    display: block;
     min-width: 100px;
-    border: none;
-    padding: 2rem 0;
+    max-width: 300px;
 }
 
 input{
-    margin: 10px 0 0 0;
+    margin: auto;
+    width: 100%;
+    min-height: 2em;
+    box-sizing: border-box;
+}
+
+.add-item{
+    margin: auto;
     width: 100%;
     min-height: 2em;
 }
-button{
-    margin: 10 px 0 0 0;
-    width: 100%;
-    min-height: 2em;
-}
+
+
+
+
 
