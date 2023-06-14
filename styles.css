@@ -13,24 +13,36 @@ h2, h3{
     text-align: center;
 }
 
-.center-block{
-    margin: auto;
-    display: block;
-    min-width: 100px;
-    max-width: 300px;
-}
-
 input{
     margin: auto;
-    width: 100%;
+    width: 90%;
     min-height: 2em;
     box-sizing: border-box;
 }
 
-.add-item{
+.center-block{
     margin: auto;
-    width: 100%;
+    width: 300px;
+    position: relative;
+}
+
+#add-item-button{
+    margin: auto;
+    width: 10%;
     min-height: 2em;
+    position: absolute;
+}
+
+#pick-random-item{
+    margin: 10px 0px 10px 0px;
+    width: 50%;
+    min-height: 2em;
+}
+#clear-items-button{
+    margin: 10px 0px 10px 0;
+    width: 50%;
+    min-height: 2em;
+    position: absolute;
 }
 
 
