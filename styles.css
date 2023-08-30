@@ -26,6 +26,12 @@ input{
     position: relative;
 }
 
+.items-list{
+    margin: auto;
+    width: 300px;
+    position: relative;
+}
+
 #add-item-button{
     margin: auto;
     width: 10%;
