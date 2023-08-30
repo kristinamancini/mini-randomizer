@@ -7,6 +7,8 @@
     </head>
     <body>
         <h2>Mini Randomizer</h2>
+
+        <!-- REMOVE LATER -->
         <div class="items-list" >
             <ul id="myList"></ul>
             <script>
@@ -15,13 +17,27 @@
                 for (i = 0; i < data.length; i++){
                     let li = document.createElement("li");
                     li.innerText = data[i];
-                    list.appendChild(li);
+                    list.appendChild(li);                
+                }
+
+                function addItem(){
+                   let x = document.getElementById("new_element");
+                   let n = [];
+                   console.log(x);
+                   for (j = 0; j < x.length; j++){
+                        let this_li = document.createElement("li");
+                        this_li.innerText = x[j];
+                        x.appendChild(this_li);                
+                    }
+
                 }
             </script>
         </div>
+        <!-- REMOVE LATER -->
+
         <div class="center-block" >
-            <input type="text" placeholder="Insert item" button />
-            <button id="add-item-button">+</button>
+            <input id="new_element" type="text" placeholder="Insert item" />
+            <button id="add-item-button" onclick="addItem()" >+</button>
             <button id="pick-random-item">Pick Random</button>
             <button id="clear-items-button">Clear</button>
         </div>
