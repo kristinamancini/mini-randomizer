@@ -5,16 +5,26 @@
         <title>Mini Randomizer</title>
         <link rel="stylesheet" href="styles.css">
     </head>
+    
     <body>
         <h2>Mini Randomizer</h2>
 
-
         <div class="items-list" >
-            <ul id="UnList"></ul>
+            <ul id="myList"></ul>
             <script>
+                let myData = [];
+                function itemList(){
+                    if (myData.length < 7){
+                        myData.push(document.getElementById("inputId").value);
+                        addItem();
+                    }
+                    else
+                        alert("No more items to add! You can only add 7 items.");
+                }
+
                 function addItem(){
-                    let data = ["1"];
-                    let list = document.getElementById("UnList");
+                    let data = [""];
+                    let list = document.getElementById("myList");
                     var inputVal = document.getElementById("inputId").value;
                     for (i = 0; i < data.length; i++){
                         let li = document.createElement("li");
@@ -33,41 +43,12 @@
                     document.getElementById("item").innerHTML = inputVal;
                 }
             </script> -->
-
-
-
-
-
-        <!-- REMOVE LATER -->
-            <!-- <ul id="myList"></ul>
-            <script>
-                let data = ["1", "2", "3", "4", "5", "6", "7"];
-                let list = document.getElementById("myList");
-                for (i = 0; i < data.length; i++){
-                    let li = document.createElement("li");
-                    li.innerText = data[i];
-                    list.appendChild(li);                
-                }
-
-                function addItem(){
-                   let x = document.getElementById("new_element");
-                   let n = [];
-                   console.log(x);
-                   for (j = 0; j < x.length; j++){
-                        let this_li = document.createElement("li");
-                        this_li.innerText = x[j];
-                        x.appendChild(this_li);                
-                    }
-
-                }
-            </script> -->
-        <!-- REMOVE LATER -->
         </div>
  
 
         <div class="center-block" >
             <input id="inputId" type="text" placeholder="Insert item" />
-            <button id="add-item-button" type="button" onclick="addItem();" >+</button>
+            <button id="add-item-button" type="button" onclick="itemList();" >+</button>
 
             <button id="pick-random-item">Pick Random</button>
             <button id="clear-items-button">Clear</button>
