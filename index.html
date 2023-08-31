@@ -10,13 +10,29 @@
 
 
         <div class="items-list" >
-            <script type="text/javascript">
+            <ul id="UnList"></ul>
+            <script>
+                function addItem(){
+                    let data = ["1"];
+                    let list = document.getElementById("UnList");
+                    var inputVal = document.getElementById("inputId").value;
+                    for (i = 0; i < data.length; i++){
+                        let li = document.createElement("li");
+                        data[i] = inputVal;
+                        li.innerText = data[i];
+                        list.appendChild(li);                
+                    }  
+                }
+
+            </script>
+
+
+            <!-- <script type="text/javascript">
                 function addItem(){
                     var inputVal = document.getElementById("inputId").value;
                     document.getElementById("item").innerHTML = inputVal;
                 }
-
-            </script>
+            </script> -->
 
 
 
@@ -52,6 +68,7 @@
         <div class="center-block" >
             <input id="inputId" type="text" placeholder="Insert item" />
             <button id="add-item-button" type="button" onclick="addItem();" >+</button>
+
             <button id="pick-random-item">Pick Random</button>
             <button id="clear-items-button">Clear</button>
         </div>
