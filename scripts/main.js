@@ -4,4 +4,26 @@
        
 // };
 
+let myData = [];
+function itemList(){
+    if (myData.length < 7){
+        myData.push(document.getElementById("inputId").value);
+        addItem();
+    }
+    else
+        alert("No more items to add! You can only add 7 items.");
+}
+
+function addItem(){
+    let data = [""];
+    let list = document.getElementById("myList");
+    var inputVal = document.getElementById("inputId").value;
+    for (i = 0; i < data.length; i++){
+        let li = document.createElement("li");
+        data[i] = inputVal;
+        li.innerText = data[i];
+        list.appendChild(li);                
+    }  
+}
+
 
