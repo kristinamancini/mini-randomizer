@@ -26,4 +26,9 @@ function addItem(){
     }  
 }
 
+function clearItems(){
+    document.getElementById("myList").innerHTML = "";
+    myData.length = 0;
+}
+
 
