@@ -22,6 +22,8 @@ function addItem(){
     let checkbox = document.createElement("input");
     checkbox.id = "itemBox";
     checkbox.type = "checkbox";
+
+    //clear the text field
     document.getElementById("inputId").value = "";
     
     for (i = 0; i < data.length; i++){
@@ -34,8 +36,6 @@ function addItem(){
         myDiv.appendChild(label);
         myDiv.appendChild(checkbox);
         myDiv.appendChild(br);
-        //clear the text field
-
     }  
 }
 
@@ -66,6 +66,17 @@ function clearItems(){
     document.getElementById("inputId").value = "";
     //document.getElementById("myList").innerHTML = "";
     myData.length = 0;
+    let randomItemLabel = document.getElementById("random-item");
+    randomItemLabel.innerText = "";
+}
+
+function pickRandomItem(){
+    let r = document.createElement("h3");
+    let randomItemLabel = document.getElementById("random-item");
+    const randomElement = Math.floor(Math.random() * myData.length);
+
+    randomItemLabel.innerText = myData[randomElement];
+    randomItemLabel.appendChild(myData[randomElement]);
 }
 
 
