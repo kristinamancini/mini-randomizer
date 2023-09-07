@@ -18,28 +18,16 @@ function addItem(){
 
     //for checkboxes
     let checkbox = document.createElement("input");
+    checkbox.id = "itemBox";
     checkbox.type = "checkbox";
-    checkbox.name = "name";
-    checkbox.value = "value";
-    checkbox.id = "id";
-
-    //var label = document.createElement("label");
-    //label.htmlFor = "id";
-
     
-
-
     for (i = 0; i < data.length; i++){
         let label = document.createElement("label");
-        var br = document.createElement("br");
         data[i] = inputVal;
         label.innerText = data[i];
-        //label.appendChild(document.createTextNode(i));
         myDiv.appendChild(label);
         myDiv.appendChild(checkbox);
         myDiv.appendChild(br);
-        
-        
     }  
 }
 
