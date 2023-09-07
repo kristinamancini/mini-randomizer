@@ -10,24 +10,32 @@ function itemList(){
 }
 
 function addItem(){
-    //add to list
+    //data list array
     let data = [""];
+    //get elements by ID
     let list = document.getElementById("myList");
     let myDiv = document.getElementById("myItems");
+    //get the value of the input
     var inputVal = document.getElementById("inputId").value;
 
     //for checkboxes
     let checkbox = document.createElement("input");
     checkbox.id = "itemBox";
     checkbox.type = "checkbox";
+    document.getElementById("inputId").value = "";
     
     for (i = 0; i < data.length; i++){
+        //creates new element
         let label = document.createElement("label");
+        //sets index to the value
         data[i] = inputVal;
+        //displays the value on screen
         label.innerText = data[i];
         myDiv.appendChild(label);
         myDiv.appendChild(checkbox);
         myDiv.appendChild(br);
+        //clear the text field
+
     }  
 }
 
@@ -55,6 +63,7 @@ function addItem(){
 
 function clearItems(){
     document.getElementById("myItems").innerHTML = "";
+    document.getElementById("inputId").value = "";
     //document.getElementById("myList").innerHTML = "";
     myData.length = 0;
 }
