@@ -71,12 +71,15 @@ function clearItems(){
 }
 
 function pickRandomItem(){
-    let r = document.createElement("h3");
+    if (myData.length == 0)
+        alert("There are no items to pick from!")
+    else{
     let randomItemLabel = document.getElementById("random-item");
     const randomElement = Math.floor(Math.random() * myData.length);
 
     randomItemLabel.innerText = myData[randomElement];
     randomItemLabel.appendChild(myData[randomElement]);
+    }
 }
 
 
