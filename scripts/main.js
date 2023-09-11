@@ -1,5 +1,15 @@
 let myData = [];
 
+//press 'Enter' key after input
+
+var keyInput = document.getElementById("inputId");
+keyInput.addEventListener("keypress", function(event){
+    if (event.key == "Enter"){
+        event.preventDefault();
+        document.getElementById("add-item-button").click();
+    }
+});
+
 function itemList(){
     if (myData.length < 7){
         myData.push(document.getElementById("inputId").value);
@@ -29,8 +39,10 @@ function addItem(){
     for (i = 0; i < data.length; i++){
         //creates new element
         let label = document.createElement("label");
+
         //sets index to the value
         data[i] = inputVal;
+
         //displays the value on screen
         label.innerText = data[i];
         myDiv.appendChild(label);
@@ -81,5 +93,3 @@ function pickRandomItem(){
     randomItemLabel.appendChild(myData[randomElement]);
     }
 }
-
-
