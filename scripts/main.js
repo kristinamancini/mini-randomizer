@@ -12,14 +12,14 @@ keyInput.addEventListener("keypress", function(event){
 
 function itemList(){
 
-    if (document.getElementById("inputId").value == "")
+    if (document.getElementById("inputId").value.trim() == "")
         alert("Your input is empty!");
 
     else if (myData.length < 7){
         myData.push(document.getElementById("inputId").value);
         addItem();
     }
-    
+
     else
         alert("No more items to add! You can only add 7 items.");
 }
