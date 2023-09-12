@@ -1,7 +1,6 @@
 let myData = [];
 
 //press 'Enter' key after input
-
 var keyInput = document.getElementById("inputId");
 keyInput.addEventListener("keypress", function(event){
     if (event.key == "Enter"){
@@ -38,7 +37,10 @@ function addItem(){
     checkbox.id = "itemBox";
     checkbox.type = "checkbox";
 
-    //clear the text field
+    //add line break
+    let line_break = document.createElement("br");
+
+    //clear the text field after each input
     document.getElementById("inputId").value = "";
     
     for (i = 0; i < data.length; i++){
@@ -50,9 +52,9 @@ function addItem(){
 
         //displays the value on screen
         label.innerText = data[i];
-        myDiv.appendChild(label);
-        myDiv.appendChild(checkbox);
-        myDiv.appendChild(br);
+        myDiv.appendChild(label).appendChild(checkbox);
+        myDiv.appendChild(line_break);
+        //myDiv.appendChild(checkbox);
     }  
 }
 
