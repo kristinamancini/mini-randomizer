@@ -66,8 +66,8 @@ function remove(){
     // });
 
     myData.forEach.call(checkboxes, function(checkbox){
-        checkbox.before(checkbox).remove(); //FIX
-        //myData.splice(myData.indexOf(checkbox.closest("label")), 1);
+        checkbox.closest("label").remove(); //FIX, might need to connect wtih id in html
+        //myData.splice(myData.indexOf(checkbox.closest("label")), 1); //FIX..all the elements are strings
         });
 }
 
@@ -105,7 +105,7 @@ function pickRandomItem(){
     
     //test
     let myTest = document.getElementById("test");
-    myTest.innerText = myData;
+    myTest.innerText = myData[0];
 
     //randomItemLabel.appendChild(myData[randomElement]);
     }
