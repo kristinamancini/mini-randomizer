@@ -9,16 +9,17 @@
     <body>
         <h2>Mini Randomizer</h2>
 
-        <div class="items-list" id="myItems" >
-            <ul id="myList"></ul>
-        </div>
+        <ul class="items-list" id="myUL" >
+            <div id="myDiv"></div>
+        </ul>
  
+        <!-- FIX LABELS -->
         <div class="center-block" >
             <input id="inputId" type="text" placeholder="Insert item" />
             <button id="add-item-button" type="button" onclick="itemList();" >+</button>
 
             <button id="pick-random-item" type="button" onclick="pickRandomItem();" >Pick Random</button>
-            <button id="clear-items-button" type="button" onclick="clearItems();">Clear All</button>
+            <button id="clear-items-button" type="button" onclick="remove();">Remove</button>
         </div>
         
         <hr>

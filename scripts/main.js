@@ -9,6 +9,56 @@ keyInput.addEventListener("keypress", function(event){
     }
 });
 
+//FIX
+function addItem(){
+    //add data list array
+    let data = [""];
+
+    //get elements by ID
+    let myDiv = document.getElementById("myDiv");
+    //get the value of the input
+    var inputVal = document.getElementById("inputId").value;
+
+    //for checkboxes
+    var checkbox = document.createElement("input");
+
+    if (inputVal === "")
+        alert("Input empty");
+    else
+        document.getElementById("myUL").appendChild(checkbox);
+
+    
+    //checkbox.id = "itemBox";
+    checkbox.type = "checkbox";
+    checkbox.name = "name";
+    checkbox.value = "value";
+    checkbox.classList.add("checkbox");
+
+    var label = document.createElement("label");
+
+    label.appendChild(document.createTextNode(inputVal));
+    label.appendChild(checkbox);
+
+    myDiv.appendChild(label);
+    
+    //clear the text field after each input
+    document.getElementById("inputId").value = "";
+    
+    for (i = 0; i < data.length; i++){
+        data[i] = inputVal;
+
+    } 
+
+}
+
+function remove(){
+    const checkboxes = document.querySelectorAll(".checkbox:checked");
+    Array.prototype.forEach.call(checkboxes, function(checkbox){
+        checkbox.closest("label").remove();
+        myData.length--;
+    });
+}
+
 function itemList(){
     if (document.getElementById("inputId").value.trim() == "")
         alert("Your input is empty!");
@@ -21,57 +71,13 @@ function itemList(){
         alert("No more items to add! You can only add 7 items.");
 }
 
-function addItem(){
-    //add data list array
-    let data = [""];
-
-    //get elements by ID
-    let myDiv = document.getElementById("myItems");
-    //get the value of the input
-    var inputVal = document.getElementById("inputId").value;
-
-    //for checkboxes
-    let checkbox = document.createElement("input");
-    checkbox.id = "itemBox";
-    checkbox.type = "checkbox";
-
-    //add line break
-    let line_break = document.createElement("br");
-
-    //clear the text field after each input
-    document.getElementById("inputId").value = "";
-    
-    for (i = 0; i < data.length; i++){
-        //creates new element
-        let label = document.createElement("label");
-
-        //sets index to the value
-        data[i] = inputVal;
-
-        //displays the value on screen
-        label.innerText = data[i];
-        myDiv.appendChild(label).appendChild(checkbox);
-        myDiv.appendChild(line_break);
-        //myDiv.appendChild(checkbox);
-    } 
-    
-    //FIX
-    if (checkbox.checked)
-        checkbox.removeItem();
-    //checkbox.onclick(removeItem());
-}
-
 //FIX
-function removeItem(){
-    var itemToRemove = document.getElementById("itemBox");
-    itemToRemove.parentNode.removeChild(itemToRemove);
-}
-
 function clearItems(){
-    document.getElementById("myItems").innerHTML = "";
+    document.getElementById("myUL").innerHTML = "";
     document.getElementById("inputId").value = "";
-    //document.getElementById("myList").innerHTML = "";
     myData.length = 0;
+
+    //clear picked item
     let randomItemLabel = document.getElementById("random-item");
     randomItemLabel.innerText = "";
 }
