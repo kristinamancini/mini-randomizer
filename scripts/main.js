@@ -51,12 +51,24 @@ function addItem(){
 
 }
 
+//FIx : something wrong with myData and not removing elements properly, in the
 function remove(){
     const checkboxes = document.querySelectorAll(".checkbox:checked");
-    Array.prototype.forEach.call(checkboxes, function(checkbox){
-        checkbox.closest("label").remove();
-        myData.length--;
-    });
+    // Array.from(checkboxes).forEach(element =>
+    //     element.remove()
+        
+    // );
+    //myData.splice(,1);
+    // Array.prototype.forEach.call(checkboxes, function(checkbox){
+    //     checkbox.closest("label").remove();
+    //     myData.splice(myData.indexOf(checkbox),1);
+    //     //myData.length--;
+    // });
+
+    myData.forEach.call(checkboxes, function(checkbox){
+        checkbox.before(checkbox).remove(); //FIX
+        //myData.splice(myData.indexOf(checkbox.closest("label")), 1);
+        });
 }
 
 function itemList(){
@@ -90,6 +102,11 @@ function pickRandomItem(){
     const randomElement = Math.floor(Math.random() * myData.length);
 
     randomItemLabel.innerText = myData[randomElement];
-    randomItemLabel.appendChild(myData[randomElement]);
+    
+    //test
+    let myTest = document.getElementById("test");
+    myTest.innerText = myData;
+
+    //randomItemLabel.appendChild(myData[randomElement]);
     }
 }
