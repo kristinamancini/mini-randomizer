@@ -20,7 +20,6 @@ input{
     box-sizing: border-box;
 }
 
-/* FIX SECTION, CHECKBOX MOVES DIAGONAL AFTER ENTER ITEM*/
 #itemBox{
     width: 20px;
     height: 20px;
@@ -53,7 +52,6 @@ label{
     position: relative;
 }
 
-/* FIX SECTION, ADD BUTTON MOVING AFTER ENTER */
 #add-item-button{
     margin: auto;
     width: 10%;

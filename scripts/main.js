@@ -10,7 +10,6 @@ keyInput.addEventListener("keypress", function(event){
 });
 
 function itemList(){
-
     if (document.getElementById("inputId").value.trim() == "")
         alert("Your input is empty!");
 
@@ -18,16 +17,15 @@ function itemList(){
         myData.push(document.getElementById("inputId").value);
         addItem();
     }
-
     else
         alert("No more items to add! You can only add 7 items.");
 }
 
 function addItem(){
-    //data list array
+    //add data list array
     let data = [""];
+
     //get elements by ID
-    let list = document.getElementById("myList");
     let myDiv = document.getElementById("myItems");
     //get the value of the input
     var inputVal = document.getElementById("inputId").value;
@@ -55,30 +53,19 @@ function addItem(){
         myDiv.appendChild(label).appendChild(checkbox);
         myDiv.appendChild(line_break);
         //myDiv.appendChild(checkbox);
-    }  
+    } 
+    
+    //FIX
+    if (checkbox.checked)
+        checkbox.removeItem();
+    //checkbox.onclick(removeItem());
 }
 
-
-// function addItem(){
-//     //add to list
-//     let data = [""];
-//     let list = document.getElementById("myList");
-//     var inputVal = document.getElementById("inputId").value;
-
-//     //for checkboxes
-//     //let myDiv = document.getElementById("items-list");
-//     let checkbox = document.createElement("input");
-//     checkbox.type = "checkbox";
-
-//     for (i = 0; i < data.length; i++){
-//         let li = document.createElement("li");
-//         data[i] = inputVal;
-//         li.innerText = data[i];
-//         list.appendChild(li); 
-//         //add checkbox
-//         list.appendChild(checkbox);               
-//     }  
-// }
+//FIX
+function removeItem(){
+    var itemToRemove = document.getElementById("itemBox");
+    itemToRemove.parentNode.removeChild(itemToRemove);
+}
 
 function clearItems(){
     document.getElementById("myItems").innerHTML = "";
