@@ -9,7 +9,6 @@ keyInput.addEventListener("keypress", function(event){
     }
 });
 
-//FIX
 function addItem(){
     //add data list array
     let data = [""];
@@ -46,29 +45,14 @@ function addItem(){
     
     for (i = 0; i < data.length; i++){
         data[i] = inputVal;
-
     } 
-
 }
 
-//FIXED, need to clean up
 function remove(){
     const checkboxes = document.querySelectorAll(".checkbox:checked");
-    // Array.from(checkboxes).forEach(element =>
-    //     element.remove()
-        
-    // );
-    //myData.splice(,1);
-    // Array.prototype.forEach.call(checkboxes, function(checkbox){
-    //     checkbox.closest("label").remove();
-    //     myData.splice(myData.indexOf(checkbox),1);
-    //     //myData.length--;
-    // });
-
     myData.forEach.call(checkboxes, function(checkbox){
         checkbox.closest("label").remove(); //FIX, might need to connect wtih id in html
         myData.splice(myData.indexOf(checkbox.closest("label").textContent), 1);
-        //myData.splice(myData.indexOf(checkbox.closest("label")), 1); //FIX..all the elements are strings
         });
 }
 
