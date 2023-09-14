@@ -7,10 +7,19 @@ body{
     font-family: Tahoma;
     font-size: 25px;
 }
+hr{
+    margin-bottom: 45px;
+    margin-top: -20px;
+    width: 50%;
+}
 
 h2, h3{
     margin: 1em auto;
     text-align: center;
+}
+
+ul{
+    list-style-type: none;
 }
 
 input{
@@ -32,6 +41,9 @@ input{
     top: -1px;
     right: auto;
 }
+#title{
+    font-size: 50px;
+}
 
 label{
     display: block;
@@ -48,7 +60,7 @@ label{
 
 .items-list{
     margin: auto;
-    width: 300px;
+    width: 400px;
     position: relative;
 }
 
