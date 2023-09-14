@@ -53,7 +53,7 @@ function addItem(){
     } 
 }
 
-//test trying to figure out how to just grab checkbox to remove
+//test FIX trying to figure out how to just grab checkbox to remove
 
 // const checkboxes = document.querySelectorAll(".checkbox:checked");
 // myData.forEach.call(checkboxes, function(checkbox){
