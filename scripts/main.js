@@ -70,9 +70,9 @@ function itemList(){
 
 //FIX
 function clearItems(){
-    document.getElementById("myUL").innerHTML = "";
+    document.getElementById("myDiv").innerText = "";
     document.getElementById("inputId").value = "";
-    myData.length = 0;
+    myData = [];
 
     //clear picked item
     let randomItemLabel = document.getElementById("random-item");
