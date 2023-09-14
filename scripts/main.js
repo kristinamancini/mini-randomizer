@@ -51,7 +51,7 @@ function addItem(){
 
 }
 
-//FIx : something wrong with myData and not removing elements properly, in the
+//FIXED, need to clean up
 function remove(){
     const checkboxes = document.querySelectorAll(".checkbox:checked");
     // Array.from(checkboxes).forEach(element =>
@@ -67,6 +67,7 @@ function remove(){
 
     myData.forEach.call(checkboxes, function(checkbox){
         checkbox.closest("label").remove(); //FIX, might need to connect wtih id in html
+        myData.splice(myData.indexOf(checkbox.closest("label").textContent), 1);
         //myData.splice(myData.indexOf(checkbox.closest("label")), 1); //FIX..all the elements are strings
         });
 }
@@ -104,8 +105,8 @@ function pickRandomItem(){
     randomItemLabel.innerText = myData[randomElement];
     
     //test
-    let myTest = document.getElementById("test");
-    myTest.innerText = myData[0];
+    //let myTest = document.getElementById("test");
+    //myTest.innerText = "my array now has " + myData;
 
     //randomItemLabel.appendChild(myData[randomElement]);
     }
