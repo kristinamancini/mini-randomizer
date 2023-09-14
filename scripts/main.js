@@ -27,7 +27,6 @@ function addItem(){
         document.getElementById("myUL").appendChild(checkbox);
 
     
-    //checkbox.id = "itemBox";
     checkbox.type = "checkbox";
     checkbox.name = "name";
     checkbox.value = "value";
@@ -39,6 +38,10 @@ function addItem(){
     label.appendChild(checkbox);
 
     myDiv.appendChild(label);
+
+    //let lineBreak = document.createElement("br");
+    //myDiv.appendChild(lineBreak);
+
     
     //clear the text field after each input
     document.getElementById("inputId").value = "";
@@ -51,7 +54,7 @@ function addItem(){
 function remove(){
     const checkboxes = document.querySelectorAll(".checkbox:checked");
     myData.forEach.call(checkboxes, function(checkbox){
-        checkbox.closest("label").remove(); //FIX, might need to connect wtih id in html
+        checkbox.closest("label").remove();
         myData.splice(myData.indexOf(checkbox.closest("label").textContent), 1);
         });
 }
@@ -68,7 +71,6 @@ function itemList(){
         alert("No more items to add! You can only add 7 items.");
 }
 
-//FIX
 function clearItems(){
     document.getElementById("myDiv").innerText = "";
     document.getElementById("inputId").value = "";

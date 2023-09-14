@@ -5,7 +5,7 @@ body{
     background-color: rgb(6, 12, 10);
     color: #f5f6f7;
     font-family: Tahoma;
-    font-size: 16px;
+    font-size: 25px;
 }
 
 h2, h3{
@@ -20,14 +20,14 @@ input{
     box-sizing: border-box;
 }
 
-#itemBox{
-    width: 20px;
-    height: 20px;
-    /* display: inline-block; */
+.checkbox{
+    width: 30px;
+    height: 30px;
+    /* display: block; */
     /* vertical-align: middle; */
     position: relative;
     bottom: 1px;
-    padding: 0;
+    padding-bottom: 10px;
     margin: 0;
     float: right;
     top: -1px;
@@ -36,8 +36,9 @@ input{
 
 label{
     display: block;
-    padding-left: 15px;
-    text-indent: -15px;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    text-indent: -20px;
 }
 
 .center-block{
@@ -54,6 +55,9 @@ label{
 
 #add-item-button{
     margin: auto;
+    display: inline;
+    margin-left: 1px;
+   /* margin-top: 7px; */
     width: 10%;
     min-height: 2em;
     position: absolute;
