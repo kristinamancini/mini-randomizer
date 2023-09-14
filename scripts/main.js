@@ -9,6 +9,8 @@ keyInput.addEventListener("keypress", function(event){
     }
 });
 
+
+
 function addItem(){
     //add data list array
     let data = [""];
@@ -50,6 +52,37 @@ function addItem(){
         data[i] = inputVal;
     } 
 }
+
+//test trying to figure out how to just grab checkbox to remove
+
+// const checkboxes = document.querySelectorAll(".checkbox:checked");
+// myData.forEach.call(checkboxes, function(checkbox){
+//     checkbox.addEventListener('change', function() {
+//         alert("CHECK");
+
+//     });
+//     });
+
+// var checkboxes = document.querySelectorAll(".checkbox:checked");
+
+// let enabledSettings = [];
+
+// checkboxes.forEach(function(checkbox){
+//     checkbox.addEventListener('change', function() {
+//         enabledSettings = Array.from(checkboxes).filter(i => i.checked).map(i => i.value);
+          
+//         alert("CLICKED" + enabledSettings);
+//       })
+//     });
+
+
+// cb.addEventListener('change', function() {
+//   if (this.checked) 
+//     alert("Checkbox is checked..");
+// });
+
+//test
+
 
 function remove(){
     const checkboxes = document.querySelectorAll(".checkbox:checked");
@@ -93,6 +126,8 @@ function pickRandomItem(){
     //test
     //let myTest = document.getElementById("test");
     //myTest.innerText = "my array now has " + myData;
+    //var checkboxes = document.querySelectorAll(".checkbox:checked");
+    //myTest.innerText = checkboxes;
 
     //randomItemLabel.appendChild(myData[randomElement]);
     }
