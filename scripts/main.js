@@ -9,8 +9,6 @@ keyInput.addEventListener("keypress", function(event){
     }
 });
 
-
-
 function addItem(){
     //add data list array
     let data = [""];

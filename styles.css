@@ -2,7 +2,7 @@ body{
     width: 100%;
     height: 100vh;
     margin: 0;
-    background-color: rgb(6, 12, 10);
+    background-color: rgb(132, 146, 142);
     color: #f5f6f7;
     font-family: Tahoma;
     font-size: 25px;
@@ -30,6 +30,7 @@ input{
     vertical-align: middle;
 }
 
+/* FIX trying to add*/
 .checkbox{
     width: 30px;
     height: 30px;
@@ -40,6 +41,12 @@ input{
     float: right;
     top: -1px;
     right: auto;
+    /* FIX */
+    background-color: blueviolet;
+    background-image: url("x-icon.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
 }
 #title{
     font-size: 50px;
