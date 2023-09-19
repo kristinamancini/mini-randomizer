@@ -21,6 +21,15 @@ function addItem(){
     //for checkboxes
     var checkbox = document.createElement("input");
 
+    //test
+    var im = document.createElement("input");
+    im.type = "image";
+    im.name = "name";
+    im.value = "value";
+    im.classList.add("image");
+
+
+
     if (inputVal === "")
         alert("Input empty");
     else
