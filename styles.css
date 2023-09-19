@@ -32,8 +32,8 @@ input{
 
 /* FIX trying to add*/
 .checkbox{
-    width: 30px;
-    height: 30px;
+    width: 30px !important;
+    height: 30px !important;
     position: relative;
     bottom: 1px;
     padding-bottom: 10px;
@@ -42,9 +42,10 @@ input{
     top: -1px;
     right: auto;
     /* FIX */
-    background: transparent;
+    background-color: transparent;
     content: url("x-icon.png");
     pointer-events: auto;
+    appearance: none;
 }
 
 .checkbox:hover {
