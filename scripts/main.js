@@ -20,22 +20,6 @@ function addItem(){
 
     //for checkboxes
     var checkbox = document.createElement("input");
-
-    //test
-    var im = document.createElement("input");
-    im.type = "image";
-    im.name = "name";
-    im.value = "value";
-    im.classList.add("image");
-
-
-
-    if (inputVal === "")
-        alert("Input empty");
-    else
-        document.getElementById("myUL").appendChild(checkbox);
-
-    
     checkbox.type = "checkbox";
     checkbox.name = "name";
     checkbox.value = "value";
@@ -45,13 +29,8 @@ function addItem(){
 
     label.appendChild(document.createTextNode(inputVal));
     label.appendChild(checkbox);
-
     myDiv.appendChild(label);
 
-    //let lineBreak = document.createElement("br");
-    //myDiv.appendChild(lineBreak);
-
-    
     //clear the text field after each input
     document.getElementById("inputId").value = "";
     
@@ -59,37 +38,6 @@ function addItem(){
         data[i] = inputVal;
     } 
 }
-
-//test FIX trying to figure out how to just grab checkbox to remove
-
-// const checkboxes = document.querySelectorAll(".checkbox:checked");
-// myData.forEach.call(checkboxes, function(checkbox){
-//     checkbox.addEventListener('change', function() {
-//         alert("CHECK");
-
-//     });
-//     });
-
-// var checkboxes = document.querySelectorAll(".checkbox:checked");
-
-// let enabledSettings = [];
-
-// checkboxes.forEach(function(checkbox){
-//     checkbox.addEventListener('change', function() {
-//         enabledSettings = Array.from(checkboxes).filter(i => i.checked).map(i => i.value);
-          
-//         alert("CLICKED" + enabledSettings);
-//       })
-//     });
-
-
-// cb.addEventListener('change', function() {
-//   if (this.checked) 
-//     alert("Checkbox is checked..");
-// });
-
-//test
-
 
 function remove(){
     const checkboxes = document.querySelectorAll(".checkbox:checked");

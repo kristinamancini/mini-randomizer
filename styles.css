@@ -42,13 +42,18 @@ input{
     top: -1px;
     right: auto;
     /* FIX */
-    background-color: blueviolet;
-    background-image: url("x-icon.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
+    background: transparent;
     content: url("x-icon.png");
+    pointer-events: auto;
 }
+
+.checkbox:hover {
+    cursor: pointer;;
+  }
+  input[type=checkbox]:after {
+    background-color: #9FFF9D;
+  }
+
 #title{
     font-size: 50px;
 }
@@ -58,6 +63,7 @@ label{
     padding-left: 0px;
     padding-bottom: 10px;
     text-indent: -20px;
+    pointer-events: none;
 }
 
 .center-block{
