@@ -20,6 +20,7 @@ h2, h3{
 
 ul{
     list-style-type: none;
+    padding-left: 0px;
 }
 
 input{
@@ -52,6 +53,12 @@ input{
 
 }
 
+#myDiv{
+    /* width: fit-content; */
+    /* display: inline-block; */
+}
+
+
 .checkbox:hover {
     cursor: pointer;
   }
@@ -66,7 +73,9 @@ label{
     padding-bottom: 10px;
     /* text-indent: -20px; */
     pointer-events: none;
+    white-space: nowrap;
     overflow: hidden;
+    /* text-overflow: clip; */
 }
 
 .center-block{
