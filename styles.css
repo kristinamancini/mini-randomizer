@@ -64,8 +64,9 @@ label{
     display: block;
     padding-left: 0px;
     padding-bottom: 10px;
-    text-indent: -20px;
+    /* text-indent: -20px; */
     pointer-events: none;
+    overflow: hidden;
 }
 
 .center-block{
