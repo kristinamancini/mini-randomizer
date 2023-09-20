@@ -32,12 +32,10 @@ input{
 
 /* FIX trying to add*/
 .checkbox{
-    width: 30px !important;
-    height: 30px !important;
+    width: 30px;
+    height: 30px;
     position: relative;
     bottom: 1px;
-    padding-bottom: 10px;
-    margin: 0;
     float: right;
     top: -1px;
     right: auto;
@@ -46,6 +44,11 @@ input{
     content: url("x-icon.png");
     pointer-events: auto;
     appearance: none;
+    width: 10%;
+    min-width:30px;
+    height: 10%;
+    min-height:30px;
+
 }
 
 .checkbox:hover {
