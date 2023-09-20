@@ -55,7 +55,11 @@ input{
 
 #myDiv{
     /* width: fit-content; */
+    /* width: 90%; */
+    /* position: relative; */
     /* display: inline-block; */
+    /* border: 5px solid; */
+    margin: auto;
 }
 
 
@@ -71,10 +75,12 @@ label{
     display: block;
     padding-left: 0px;
     padding-bottom: 10px;
+    /* margin-bottom: 5px; */
     /* text-indent: -20px; */
     pointer-events: none;
     white-space: nowrap;
     overflow: hidden;
+    position: relative;
     /* text-overflow: clip; */
 }
 
@@ -86,7 +92,7 @@ label{
 
 .items-list{
     margin: auto;
-    width: 400px;
+    width: 550px;
     position: relative;
 }
 
