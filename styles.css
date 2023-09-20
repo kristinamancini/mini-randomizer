@@ -82,6 +82,7 @@ label{
     overflow: hidden;
     position: relative;
     /* text-overflow: clip; */
+    /* margin: auto; */
 }
 
 .center-block{
@@ -92,7 +93,7 @@ label{
 
 .items-list{
     margin: auto;
-    width: 550px;
+    width: 590px;
     position: relative;
 }
 
