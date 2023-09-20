@@ -65,6 +65,7 @@ input{
 
 .checkbox:hover {
     cursor: pointer;
+    content: url("x-icon.png");
   }
 
 #title{
