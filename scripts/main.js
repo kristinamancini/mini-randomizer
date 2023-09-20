@@ -26,10 +26,11 @@ function addItem(){
     checkbox.classList.add("checkbox");
 
     var label = document.createElement("label");
-    //let lineBreak = document.createElement("br");
+    //let lineBreak = document.createElement("wbr"); fix later
 
     label.appendChild(document.createTextNode(inputVal));
     label.appendChild(checkbox);
+    //label.appendChild(lineBreak); might be onto something here, try out later
     myDiv.appendChild(label);
     
     //myDiv.appendChild(lineBreak);

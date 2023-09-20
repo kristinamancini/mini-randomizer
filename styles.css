@@ -65,13 +65,12 @@ input{
     /* border: 5px solid; */
     margin: auto;
     inline-size: 500px;
-
+    /* word-break: break-all; */
 }
-
 
 .checkbox:hover {
     cursor: pointer;
-    content: url("x-icon.png");
+    content: url("x-icon-glow.svg");
   }
 
 #title{
