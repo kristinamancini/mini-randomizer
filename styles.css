@@ -32,13 +32,13 @@ input{
 
 /* FIX trying to add*/
 .checkbox{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     position: relative;
     float: right;
     top: -1px;
     right: auto;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     /* FIX */
     margin: 0;
     background-color: transparent;
