@@ -35,27 +35,25 @@ input{
     width: 30px;
     height: 30px;
     position: relative;
-    bottom: 1px;
     float: right;
     top: -1px;
     right: auto;
+    padding-bottom: 10px;
     /* FIX */
+    margin: 0;
     background-color: transparent;
-    content: url("x-icon.png");
+    content: url("test.svg");
     pointer-events: auto;
     appearance: none;
-    width: 10%;
-    min-width:30px;
+    /* width: 10%;
+    min-width:20px;
     height: 10%;
-    min-height:30px;
+    min-height:20px; */
 
 }
 
 .checkbox:hover {
-    cursor: pointer;;
-  }
-  input[type=checkbox]:after {
-    background-color: #9FFF9D;
+    cursor: pointer;
   }
 
 #title{

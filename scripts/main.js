@@ -26,10 +26,13 @@ function addItem(){
     checkbox.classList.add("checkbox");
 
     var label = document.createElement("label");
+    //let lineBreak = document.createElement("br");
 
     label.appendChild(document.createTextNode(inputVal));
     label.appendChild(checkbox);
     myDiv.appendChild(label);
+    
+    //myDiv.appendChild(lineBreak);
 
     //clear the text field after each input
     document.getElementById("inputId").value = "";
