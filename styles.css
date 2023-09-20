@@ -17,6 +17,10 @@ h2, h3{
     margin: 1em auto;
     text-align: center;
 }
+#random-item{
+    inline-size: 650px;
+    overflow-wrap: break-word;
+}
 
 ul{
     list-style-type: none;
@@ -60,6 +64,8 @@ input{
     /* display: inline-block; */
     /* border: 5px solid; */
     margin: auto;
+    inline-size: 500px;
+
 }
 
 
@@ -81,7 +87,9 @@ label{
     pointer-events: none;
     white-space: nowrap;
     overflow: hidden;
+    overflow-wrap: break-word;
     position: relative;
+    /* inline-size: 550px; */
     /* text-overflow: clip; */
     /* margin: auto; */
 }
