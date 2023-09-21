@@ -122,12 +122,13 @@ label{
     width: 50%;
     min-height: 2em;
 }
-#remove-items-button{
+/* might not need this */
+/* #remove-items-button{
     margin: 10px 0px 10px 0;
     width: 50%;
     min-height: 2em;
     position: absolute;
-}
+} */
 #clear-items-button{
     margin: 10px 0px 10px 0;
     width: 50%;
