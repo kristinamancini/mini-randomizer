@@ -89,7 +89,7 @@ label{
     overflow-wrap: break-word;
     position: relative;
     /* inline-size: 550px; */
-    /* text-overflow: clip; */
+    text-overflow: ellipsis;
     /* margin: auto; */
 }
 
