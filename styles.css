@@ -54,7 +54,6 @@ input{
     min-width:20px;
     height: 10%;
     min-height:20px; */
-
 }
 
 #myDiv{
@@ -139,3 +138,57 @@ label{
     width: 50%;
     min-height: 2em; */
 }
+
+/* Responsive attempt */
+@media only screen and (max-width: 845px) {
+    label{
+        display: block;
+        padding-left: 0px;
+        padding-bottom: 10px;
+        pointer-events: none;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 300px;
+        overflow-wrap: break-word;
+        position: relative;
+        text-overflow: ellipsis;
+    }
+    #myDiv{
+        /* width: fit-content; */
+        /* width: 90%; */
+        /* position: relative; */
+        /* display: inline-block; */
+        /* border: 5px solid; */
+        margin: auto;
+        inline-size: 500px;
+        /* word-break: break-all; */
+    }
+    .checkbox{
+        width: 20px;
+        height: 20px;
+        position: relative;
+        float: right;
+        top: -1px;
+        right: auto;
+        padding-bottom: 0px;
+        /* FIX */
+        margin: 0px;
+        background-color: transparent;
+        content: url("test.svg");
+        pointer-events: auto;
+        appearance: none;    
+    }
+    .items-list{
+        width: 300px;
+        position: relative;
+    }
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+      }
+      body {
+        position: relative
+      }
+
+
+  }
