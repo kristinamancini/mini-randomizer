@@ -26,15 +26,10 @@ function addItem(){
     checkbox.classList.add("checkbox");
 
     var label = document.createElement("label");
-    //let lineBreak = document.createElement("wbr"); fix later
-
     label.appendChild(document.createTextNode(inputVal));
     label.appendChild(checkbox);
-    //label.appendChild(lineBreak); might be onto something here, try out later
     myDiv.appendChild(label);
     
-    //myDiv.appendChild(lineBreak);
-
     //clear the text field after each input
     document.getElementById("inputId").value = "";
     
@@ -79,15 +74,6 @@ function pickRandomItem(){
     else{
     let randomItemLabel = document.getElementById("random-item");
     const randomElement = Math.floor(Math.random() * myData.length);
-
     randomItemLabel.innerText = myData[randomElement];
-    
-    //test
-    //let myTest = document.getElementById("test");
-    //myTest.innerText = "my array now has " + myData;
-    //var checkboxes = document.querySelectorAll(".checkbox:checked");
-    //myTest.innerText = checkboxes;
-
-    //randomItemLabel.appendChild(myData[randomElement]);
     }
 }

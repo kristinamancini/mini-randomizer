@@ -35,7 +35,6 @@ input{
     vertical-align: middle;
 }
 
-/* FIX trying to add*/
 .checkbox{
     width: 20px;
     height: 20px;
@@ -44,27 +43,16 @@ input{
     top: -1px;
     right: auto;
     padding-bottom: 0px;
-    /* FIX */
     margin: 0;
     background-color: transparent;
     content: url("test.svg");
     pointer-events: auto;
     appearance: none;
-    /* width: 10%;
-    min-width:20px;
-    height: 10%;
-    min-height:20px; */
 }
 
 #myDiv{
-    /* width: fit-content; */
-    /* width: 90%; */
-    /* position: relative; */
-    /* display: inline-block; */
-    /* border: 5px solid; */
     margin: auto;
     inline-size: 500px;
-    /* word-break: break-all; */
 }
 
 .checkbox:hover {
@@ -80,16 +68,12 @@ label{
     display: block;
     padding-left: 0px;
     padding-bottom: 10px;
-    /* margin-bottom: 5px; */
-    /* text-indent: -20px; */
     pointer-events: none;
     white-space: nowrap;
     overflow: hidden;
     overflow-wrap: break-word;
     position: relative;
-    /* inline-size: 550px; */
     text-overflow: ellipsis;
-    /* margin: auto; */
 }
 
 .center-block{
@@ -104,7 +88,6 @@ label{
     position: relative;
 }
 
-/* FIX */
 #add-item-button{
     vertical-align: middle;
     display: inline;
@@ -127,14 +110,12 @@ label{
     box-sizing: border-box;
     color: #111;
     cursor: pointer;
-    /* display: flex; */
     font-family: Tahoma;
     font-size: 16px;
     height: 48px;
     justify-content: center;
     line-height: 24px;
     padding: 0 25px;
-    /* position: relative; */
     text-align: center;
     text-decoration: none;
     user-select: none;
@@ -164,10 +145,6 @@ label{
     width: 50%;
     min-height: 2em;
     position: absolute;
-    /* margin: 0 auto;
-    display: block;
-    width: 50%;
-    min-height: 2em; */
     align-items: center;
     background-color: #f5f6f7;
     border: 2px solid #111;
@@ -182,7 +159,6 @@ label{
     justify-content: center;
     line-height: 24px;
     padding: 0 25px;
-    /* position: relative; */
     text-align: center;
     text-decoration: none;
     user-select: none;
@@ -221,13 +197,6 @@ label{
 
 
 
-
-
-
-
-
-
-
 /* Responsive attempt */
 @media only screen and (max-width: 845px) {
     label{
@@ -243,14 +212,8 @@ label{
         text-overflow: ellipsis;
     }
     #myDiv{
-        /* width: fit-content; */
-        /* width: 90%; */
-        /* position: relative; */
-        /* display: inline-block; */
-        /* border: 5px solid; */
         margin: auto;
         inline-size: 500px;
-        /* word-break: break-all; */
     }
     .checkbox{
         width: 20px;
@@ -260,7 +223,6 @@ label{
         top: -1px;
         right: auto;
         padding-bottom: 0px;
-        /* FIX */
         margin: 0px;
         background-color: transparent;
         content: url("test.svg");
