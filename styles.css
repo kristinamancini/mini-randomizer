@@ -22,26 +22,36 @@ h2, h3{
     overflow-wrap: break-word;
 }
 
+#title{
+    font-size: 50px;
+}
+
+#myDiv{
+    margin: auto;
+    inline-size: 500px;
+}
+
 ul{
     list-style-type: none;
     padding-left: 0px;
 }
 
-input{
+.items-list{
     margin: auto;
-    width: 90%;
-    min-height: 2em;
-    box-sizing: border-box;
-    vertical-align: middle;
-    border-radius: 8px;
-    box-sizing: border-box;
+    width: 590px;
+    position: relative;
 }
-#inputId{
-    border: 2px solid #111;
-    font-size: 16px;
-    /* position: absolute;
-    top: 0;
-    left: 0; */
+
+label{
+    display: block;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    pointer-events: none;
+    white-space: nowrap;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    position: relative;
+    text-overflow: ellipsis;
 }
 
 .checkbox{
@@ -59,30 +69,9 @@ input{
     appearance: none;
 }
 
-#myDiv{
-    margin: auto;
-    inline-size: 500px;
-}
-
 .checkbox:hover {
     cursor: pointer;
     content: url("x-icon-glow.svg");
-  }
-
-#title{
-    font-size: 50px;
-}
-
-label{
-    display: block;
-    padding-left: 0px;
-    padding-bottom: 10px;
-    pointer-events: none;
-    white-space: nowrap;
-    overflow: hidden;
-    overflow-wrap: break-word;
-    position: relative;
-    text-overflow: ellipsis;
 }
 
 .center-block{
@@ -91,12 +80,41 @@ label{
     position: relative;
 }
 
-.items-list{
+/* INPUT ITEM */
+input{
     margin: auto;
-    width: 590px;
-    position: relative;
+    width: 90%;
+    min-height: 2em;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border-radius: 8px;
+    box-sizing: border-box;
 }
 
+#inputId{
+    border: 2px solid #111;
+    font-size: 16px;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+}
+
+#inputId:after{
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 30px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(4px, 4px);
+    transition: transform .3s ease-out;
+    z-index: -1;
+}
+
+/* ADD BUTTON */
 #add-item-button{
     vertical-align: middle;
     min-height: 2em;
@@ -117,6 +135,35 @@ label{
     font-size: 16px;
 }
 
+#add-item-button:after{
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 30px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(4px, 4px);
+    transition: transform .3s ease-out;
+    z-index: -1;
+}
+
+#add-item-button:hover:after {
+    transform: translate(0, 0);
+  }
+  
+  #add-item-button:active {
+    background-color: #d3d4d5;
+    outline: 0;
+  }
+  
+  #add-item-button:hover {
+    outline: 0;
+  }
+
+/* RANDOM BUTTON */
 #pick-random-item{
     margin: 10px 0px 10px 0px;
     width: 50%;
@@ -146,7 +193,6 @@ label{
 
 #pick-random-item:after{
     margin: 46px 0px 2px 0px;
-
     min-height: 2em;
     background-color: #111;
     border-radius: 8px;
@@ -159,9 +205,9 @@ label{
     top: -2px;
     transform: translate(4px, 4px);
     transition: transform .3s ease-out;
-    z-index: -1;
-    
+    z-index: -1; 
 }
+
 #pick-random-item:hover:after {
     transform: translate(0, 0);
   }
@@ -175,8 +221,7 @@ label{
     outline: 0;
   }
 
-
-
+/* CLEAR BUTTON */
 #clear-items-button{
     margin: 10px 0px 10px 0;
     width: 50%;
@@ -231,9 +276,6 @@ label{
 #clear-items-button:hover {
     outline: 0;
   }
-
-
-
 
 /* Responsive attempt */
 @media only screen and (max-width: 845px) {
