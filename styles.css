@@ -144,20 +144,36 @@ label{
     touch-action: manipulation;
 }
 
-/* #pick-random-item:after{
+#pick-random-item:after{
+    margin: 46px 0px 2px 0px;
+
+    min-height: 2em;
     background-color: #111;
     border-radius: 8px;
     content: "";
-    display: block;
+    /* display: block; */
     height: 48px;
     left: 0;
-    width: 100%;
+    width: 50%;
     position: absolute;
     top: -2px;
-    transform: translate(6px, 6px);
+    transform: translate(4px, 4px);
     transition: transform .3s ease-out;
     z-index: -1;
-} */
+    
+}
+#pick-random-item:hover:after {
+    transform: translate(0, 0);
+  }
+  
+#pick-random-item:active {
+    background-color: #d3d4d5;
+    outline: 0;
+  }
+  
+#pick-random-item:hover {
+    outline: 0;
+  }
 
 
 
@@ -175,7 +191,6 @@ label{
     box-sizing: border-box;
     color: #111;
     cursor: pointer;
-    /* display: flex; */
     font-family: Tahoma;
     font-size: 16px;
     height: 48px;
@@ -189,7 +204,7 @@ label{
     touch-action: manipulation;
 }
 
-/* #clear-items-button:after{
+#clear-items-button:after{
     background-color: #111;
     border-radius: 8px;
     content: "";
@@ -199,7 +214,7 @@ label{
     width: 100%;
     position: absolute;
     top: -2px;
-    transform: translate(6px, 6px);
+    transform: translate(4px, 4px);
     transition: transform .3s ease-out;
     z-index: -1;
 }
@@ -215,7 +230,7 @@ label{
   
 #clear-items-button:hover {
     outline: 0;
-  } */
+  }
 
 
 
