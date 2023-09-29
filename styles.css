@@ -33,6 +33,11 @@ input{
     min-height: 2em;
     box-sizing: border-box;
     vertical-align: middle;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+#inputId{
+    border: 2px solid #111;
 }
 
 .checkbox{
@@ -96,13 +101,17 @@ label{
     width: 10%;
     min-height: 2em;
     position: absolute;
+    /* fix */
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 2px solid #111;
+
 }
 
 #pick-random-item{
     margin: 10px 0px 10px 0px;
     width: 50%;
     min-height: 2em;
-
     align-items: center;
     background-color: #f5f6f7;
     border: 2px solid #111;
