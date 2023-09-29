@@ -94,12 +94,15 @@ input{
 #inputId{
     border: 2px solid #111;
     font-size: 16px;
+    box-sizing: border-box;
+    box-shadow:  5px 2px #111;
+    
     /* position: absolute;
     top: 0;
     left: 0; */
 }
 
-#inputId:after{
+/* #inputId:after{
     background-color: #111;
     border-radius: 8px;
     content: "";
@@ -112,7 +115,7 @@ input{
     transform: translate(4px, 4px);
     transition: transform .3s ease-out;
     z-index: -1;
-}
+} */
 
 /* ADD BUTTON */
 #add-item-button{
