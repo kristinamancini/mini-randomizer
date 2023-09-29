@@ -38,6 +38,10 @@ input{
 }
 #inputId{
     border: 2px solid #111;
+    font-size: 16px;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
 }
 
 .checkbox{
@@ -95,17 +99,22 @@ label{
 
 #add-item-button{
     vertical-align: middle;
+    min-height: 2em;
     display: inline;
     margin-left: 1px;
-    margin-top: 5px;
+    margin-top: 2px;
     width: 10%;
-    min-height: 2em;
+    top: 0;
+    right: 0;
     position: absolute;
+    padding-bottom: 3px;
     /* fix */
     border-radius: 8px;
     box-sizing: border-box;
     border: 2px solid #111;
-
+    cursor: pointer;
+    font-family: Tahoma;
+    font-size: 16px;
 }
 
 #pick-random-item{
@@ -113,6 +122,9 @@ label{
     width: 50%;
     min-height: 2em;
     align-items: center;
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
     background-color: #f5f6f7;
     border: 2px solid #111;
     border-radius: 8px;
@@ -154,6 +166,8 @@ label{
     width: 50%;
     min-height: 2em;
     position: absolute;
+    /* bottom: 0;
+    right: 0; */
     align-items: center;
     background-color: #f5f6f7;
     border: 2px solid #111;
