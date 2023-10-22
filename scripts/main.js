@@ -1,6 +1,7 @@
+//array to put data in
 let myData = [];
 
-//press 'Enter' key after input
+//press 'Enter' key after input, default to click add button
 var keyInput = document.getElementById("inputId");
 keyInput.addEventListener("keypress", function(event){
     if (event.key == "Enter"){
@@ -9,6 +10,20 @@ keyInput.addEventListener("keypress", function(event){
     }
 });
 
+//push item onto list, does not display item yet
+function itemList(){
+    if (document.getElementById("inputId").value.trim() == "")
+        alert("Your input is empty!");
+
+    else if (myData.length < 15){
+        myData.push(document.getElementById("inputId").value);
+        addItem();
+    }
+    else
+        alert("No more items to add! You can only add 15 items.");
+}
+
+//add item and checkbox x to the list, displays item
 function addItem(){
     //get elements by ID
     let myDiv = document.getElementById("myDiv");
@@ -31,6 +46,7 @@ function addItem(){
     document.getElementById("inputId").value = "";
 }
 
+//delete item in list by clicking x
 function remove(){
     const checkboxes = document.querySelectorAll(".checkbox:checked");
     myData.forEach.call(checkboxes, function(checkbox){
@@ -39,18 +55,7 @@ function remove(){
         });
 }
 
-function itemList(){
-    if (document.getElementById("inputId").value.trim() == "")
-        alert("Your input is empty!");
-
-    else if (myData.length < 15){
-        myData.push(document.getElementById("inputId").value);
-        addItem();
-    }
-    else
-        alert("No more items to add! You can only add 15 items.");
-}
-
+//clear all items on list and array
 function clearItems(){
     document.getElementById("myDiv").innerText = "";
     document.getElementById("inputId").value = "";
@@ -61,6 +66,7 @@ function clearItems(){
     randomItemLabel.innerText = "";
 }
 
+//pick a random item and display
 function pickRandomItem(){
     if (myData.length == 0)
         alert("There are no items to pick from!")

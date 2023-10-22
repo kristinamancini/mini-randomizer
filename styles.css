@@ -96,26 +96,7 @@ input{
     font-size: 16px;
     box-sizing: border-box;
     box-shadow:  3px 2px #111;
-    
-    /* position: absolute;
-    top: 0;
-    left: 0; */
 }
-
-/* #inputId:after{
-    background-color: #111;
-    border-radius: 8px;
-    content: "";
-    display: block;
-    height: 30px;
-    left: 0;
-    width: 100%;
-    position: absolute;
-    top: -2px;
-    transform: translate(4px, 4px);
-    transition: transform .3s ease-out;
-    z-index: -1;
-} */
 
 /* ADD BUTTON */
 #add-item-button{
@@ -323,6 +304,4 @@ input{
       body {
         position: relative
       }
-
-
   }
