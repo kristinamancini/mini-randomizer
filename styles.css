@@ -64,7 +64,7 @@ label{
     padding-bottom: 0px;
     margin: 0;
     background-color: transparent;
-    content: url("test.svg");
+    content: url("x-icon.svg");
     pointer-events: auto;
     appearance: none;
 }
@@ -289,7 +289,7 @@ input{
         padding-bottom: 0px;
         margin: 0px;
         background-color: transparent;
-        content: url("test.svg");
+        content: url("x-icon.svg");
         pointer-events: auto;
         appearance: none;    
     }
