@@ -10,9 +10,6 @@ keyInput.addEventListener("keypress", function(event){
 });
 
 function addItem(){
-    //add data list array
-    let data = [""];
-
     //get elements by ID
     let myDiv = document.getElementById("myDiv");
     //get the value of the input
@@ -32,10 +29,6 @@ function addItem(){
     
     //clear the text field after each input
     document.getElementById("inputId").value = "";
-    
-    for (i = 0; i < data.length; i++){
-        data[i] = inputVal;
-    } 
 }
 
 function remove(){
@@ -50,12 +43,12 @@ function itemList(){
     if (document.getElementById("inputId").value.trim() == "")
         alert("Your input is empty!");
 
-    else if (myData.length < 7){
+    else if (myData.length < 15){
         myData.push(document.getElementById("inputId").value);
         addItem();
     }
     else
-        alert("No more items to add! You can only add 7 items.");
+        alert("No more items to add! You can only add 15 items.");
 }
 
 function clearItems(){
